@@ -1,0 +1,11 @@
+<h3>Usuarios</h3>
+<div class="grid-pad">
+  <a *ngFor="let usuario of listadoUsuarios" class="col-1-4">
+    <div class="module">
+      <h4>Nombre: {{usuario.nombre}} - Clave: {{usuario.clave}}</h4>
+      <button (click)="editar(usuario)">Editar</button>
+    </div>
+  </a>
+</div>
+
+

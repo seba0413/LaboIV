@@ -1,0 +1,21 @@
+<div *ngIf= "usuarioIngresado == null">
+  <p>Nombre</p>
+  <input #usuarioName/>
+  <p>Clave</p>
+  <input #usuarioClave/><br><br>
+
+<button (click)="agregarUsuario(usuarioName.value, usuarioClave.value)">Agregar</button>
+</div>
+<div *ngIf= "usuarioIngresado != null">
+  <p>Nombre</p>
+  <input [(ngModel)] = "usuarioIngresado.nombre">
+  <p>Clave</p>
+  <input [(ngModel)] = "usuarioIngresado.clave"><br><br>
+  <button (click)="clear()">Cancelar</button>
+</div>
+
+<ul>
+  <li *ngFor="let country of listado">{{country.name}}
+  <img src="{{country.flag}}" width="20" height="10" alt=""></li>
+</ul>
+<!-- <app-listado-usuarios [listadoUsuarios] = "listadoUsuarios"></app-listado-usuarios>  -->
